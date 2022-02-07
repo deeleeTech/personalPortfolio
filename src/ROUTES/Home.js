@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { Grid } from '@mui/material'
 
 export default function Home() {
     return (
-        <div>
-            home component
-        </div>
+        <Grid container>
+            <Grid item xs={12}>
+                Home route page
+            </Grid>
+        </Grid>
     )
 }

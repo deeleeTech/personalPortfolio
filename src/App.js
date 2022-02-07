@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, useTransition, animated } from 'react-spring';
 import { useDispatch } from 'react-redux';
+
 //ROUTES++++++++++++++++++++++++++++
 import Home from './ROUTES/Home';
 //AUTH ROUTES =====
@@ -17,6 +18,7 @@ import {
 } from "react-router-dom";
 import useAuth from './useAuth';
 import './App.css';
+import NavBar from './components/NavBar';
 
 
 
@@ -28,7 +30,7 @@ export default function App() {
   return (
     <div className='App'>
       <animated.div style={propsFade}>
-          {/* <Navigation /> */}
+          <NavBar />
         <Routes>
           <Route
             path="/"
