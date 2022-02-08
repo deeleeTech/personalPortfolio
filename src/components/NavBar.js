@@ -28,11 +28,11 @@ export default function NavBar(props) {
 
     useEffect(()=>{
         window.onscroll = function() {
-          if(window.pageYOffset < 100) {
+          if(window.pageYOffset < 50) {
             setNavColor('rgba(255,255,255,.0)')
           }
           else{
-              setNavColor('rgba(0,0,0,.4)')
+              setNavColor('rgba(0,0,0,.6)')
           }
         };
       })

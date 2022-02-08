@@ -34,7 +34,7 @@ export default function App() {
   return (
     <div className='App'>
       <animated.div style={propsFade}>
-          <NavBar />
+        <div style={{ width: '100%', position: 'fixed', top: '0px', left: '0px', zIndex: 1 }}><NavBar /></div>
         <Routes>
           <Route
             path="/"
