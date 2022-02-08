@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function NavBar(props) {
@@ -21,7 +22,9 @@ export default function NavBar(props) {
           }
     }
     const [navColor, setNavColor] = useState('rgba(255,255,255,.0)');
-    const [hoveredOver, setHoveredOver] = useState('none')
+    const [hoveredOver, setHoveredOver] = useState('none');
+
+    const navigate = useNavigate();
 
     useEffect(()=>{
         window.onscroll = function() {
@@ -40,20 +43,20 @@ export default function NavBar(props) {
                 <Grid item xs={1} style={{ paddingLeft: '5px', textAlign: 'left', letterSpacing: '4px' }}>
                      
                 </Grid>
-                <Grid item xs={2} onMouseEnter={()=>setHoveredOver('webDesign')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'right', paddingTop: hoveredOver == 'webDesign' ? '12px' : '0px' }}>
+                <Grid item xs={2} onClick={()=>navigate('/Home')} onMouseEnter={()=>setHoveredOver('webDesign')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'center', paddingTop: hoveredOver == 'webDesign' ? '12px' : '0px' }}>
                      Home
                 </Grid>
-                <Grid item xs={2} onMouseEnter={()=>setHoveredOver('marketing')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'center', paddingTop: hoveredOver == 'marketing' ? '12px' : '0px' }}>
+                <Grid item xs={2} onClick={()=>navigate('/Projects')} onMouseEnter={()=>setHoveredOver('marketing')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'center', paddingTop: hoveredOver == 'marketing' ? '12px' : '0px' }}>
                      Projects
                 </Grid>
-                <Grid item xs={2} onMouseEnter={()=>setHoveredOver('about')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'center', paddingTop: hoveredOver == 'about' ? '12px' : '0px' }}>
+                <Grid item xs={2} onClick={()=>navigate('/About')} onMouseEnter={()=>setHoveredOver('about')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'center', paddingTop: hoveredOver == 'about' ? '12px' : '0px' }}>
                      About Me
-                </Grid>
-                <Grid item xs={2} onMouseEnter={()=>setHoveredOver('resume')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'left', paddingTop: hoveredOver == 'resume' ? '12px' : '0px' }}>
-                     Resume
                 </Grid>
                 <Grid item xs={3}>
                      
+                </Grid>
+                <Grid item xs={2} onClick={()=>navigate('/Resume')} onMouseEnter={()=>setHoveredOver('resume')} onMouseLeave={()=>setHoveredOver('none')} sx={{  textAlign: 'center', paddingTop: hoveredOver == 'resume' ? '12px' : '0px' }}>
+                     Resume
                 </Grid>
             </Grid>
   

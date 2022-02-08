@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSpring, useTransition, animated } from 'react-spring';
 import { useDispatch } from 'react-redux';
-
 //ROUTES++++++++++++++++++++++++++++
 import Home from './ROUTES/Home';
 //AUTH ROUTES =====
@@ -19,6 +18,11 @@ import {
 import useAuth from './useAuth';
 import './App.css';
 import NavBar from './components/NavBar';
+import Projects from './ROUTES/Projects';
+import About from './ROUTES/About';
+import Resume from './ROUTES/Resume';
+
+import testPDF from './__images/sample.pdf'
 
 
 
@@ -56,7 +60,9 @@ export default function App() {
                 </RequireAuth>
               }
             /> */}
-          <Route path="/login" element={<Login />} />
+          <Route path="/Projects" element={<Projects />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Resume" element={<Resume pdfDoc={testPDF} />} />
         </Routes>
       </animated.div>
     </div>
