@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Grid } from '@mui/material';
 import LightSpeed from 'react-reveal/LightSpeed';
 import Slide from 'react-reveal/Slide'
+import Bounce from 'react-reveal/Bounce'
 
 export default function Home() {
 
@@ -23,7 +24,7 @@ export default function Home() {
             paddingTop: '75px',
             textAlign: 'left',
             fontFamily: "'Aclonica', sans-serif",
-            paddingLeft: '40px'
+            paddingLeft: '20px'
         },
         'header' : {
             fontSize: window.screen.width > 400 ? '144px' : '72px',
@@ -33,7 +34,7 @@ export default function Home() {
             textAlign: 'left',
             color: 'rgba(255,255,255,.8)',
             textShadow: '1px 0px 14px white',
-            textDecoration: 'underline black',
+            // textDecoration: 'underline black',
             textUnderlinePosition: 'under',
         }
     }
@@ -42,15 +43,15 @@ export default function Home() {
 
     return (
         <Grid container sx={customStyles.container}>
-            <Grid item xs={8} sx={customStyles.mainSection}>
-                <Slide left duration={5000}>
+            <Grid item xs={9} sx={customStyles.mainSection}>
+                <Bounce left duration={2600}>
                     <h1 style={customStyles.header}>
                         Dillon Lee
                     </h1>
-                </Slide>
+                </Bounce>
             </Grid>
-            <Grid item xs={4} sx={customStyles.sideSection}>
-                <Slide right cascade delay={3000} duration={3000}>
+            <Grid item xs={3} sx={customStyles.sideSection}>
+                <Slide right cascade delay={1600} duration={3000}>
                     <div>
                         <h2>Developer</h2>
                         <h2>Entrepreneur</h2>

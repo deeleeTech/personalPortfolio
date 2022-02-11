@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Document, Page } from 'react-pdf';
 import Grid from '@mui/material/Grid';
+
+import Bounce from 'react-reveal/Bounce';
 import resumePDF from '../__images/resumeDillon.pdf';
 import {AiFillGithub} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
@@ -50,57 +52,61 @@ export default function Resume() {
     <Grid container sx={customStyles.container}>
       <Grid item xs={1}></Grid>
       <Grid item xs={6}>
-        <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
-          <Page pageNumber={pageNumber} />
-        </Document>
+        <Bounce bottom>
+           <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
+              <Page pageNumber={pageNumber} />
+          </Document>
+        </Bounce>
       </Grid>
       <Grid item xs={5}>
-        <Grid container>
-            <Grid item xs={12} sx={customStyles.resumeHeader}>
-                RESUME
-            </Grid>
+        <Bounce right>
+          <Grid container>
+              <Grid item xs={12} sx={customStyles.resumeHeader}>
+                  RESUME
+              </Grid>
 
-            <Grid item xs={2} sx={customStyles.socialStyle}>
-                <AiFillGithub style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
-            </Grid>
-            <Grid item xs={9} sx={{ paddingTop: '40px' }}>
-                <div style={customStyles.socialText}>
-                   www.github.com/deeleeTech
-                </div>
-            </Grid>
-            <Grid item xs={1}></Grid>
+              <Grid item xs={2} sx={customStyles.socialStyle}>
+                  <AiFillGithub style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
+              </Grid>
+              <Grid item xs={9} sx={{ paddingTop: '40px' }}>
+                  <div style={customStyles.socialText}>
+                    www.github.com/deeleeTech
+                  </div>
+              </Grid>
+              <Grid item xs={1}></Grid>
 
-            <Grid item xs={2} sx={customStyles.socialStyle}>
-                <AiFillLinkedin style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
-            </Grid>
-            <Grid item xs={9} sx={{ paddingTop: '40px' }}>
-                <div style={customStyles.socialText}>
-                   linkedin.com/in/dillon-l-24ba3b1a9/
-                </div>
-            </Grid>
-            <Grid item xs={1}></Grid>
+              <Grid item xs={2} sx={customStyles.socialStyle}>
+                  <AiFillLinkedin style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
+              </Grid>
+              <Grid item xs={9} sx={{ paddingTop: '40px' }}>
+                  <div style={customStyles.socialText}>
+                    linkedin.com/in/dillon-l-24ba3b1a9/
+                  </div>
+              </Grid>
+              <Grid item xs={1}></Grid>
 
-            <Grid item xs={2} sx={customStyles.socialStyle}>
-                <AiFillPhone style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
-            </Grid>
-            <Grid item xs={9} sx={{ paddingTop: '40px' }}>
-                <div style={customStyles.socialText}>
-                   (830) 837-6140
-                </div>
-            </Grid>
-            <Grid item xs={1}></Grid>
+              <Grid item xs={2} sx={customStyles.socialStyle}>
+                  <AiFillPhone style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
+              </Grid>
+              <Grid item xs={9} sx={{ paddingTop: '40px' }}>
+                  <div style={customStyles.socialText}>
+                    (830) 837-6140
+                  </div>
+              </Grid>
+              <Grid item xs={1}></Grid>
 
-            <Grid item xs={2} sx={customStyles.socialStyle}>
-                <GrLocation style={{ border: '1px solid black', borderRadius: '25px', backgroundColor: 'rgba(255,255,255,.8)', color: 'white' }}/>
-            </Grid>
-            <Grid item xs={9} sx={{ paddingTop: '40px' }}>
-                <div style={customStyles.socialText}>
-                   College Station, Texas
-                </div>
-            </Grid>
-            <Grid item xs={1}></Grid>
+              <Grid item xs={2} sx={customStyles.socialStyle}>
+                  <GrLocation style={{ border: '1px solid black', borderRadius: '25px', backgroundColor: 'rgba(255,255,255,.8)', color: 'white' }}/>
+              </Grid>
+              <Grid item xs={9} sx={{ paddingTop: '40px' }}>
+                  <div style={customStyles.socialText}>
+                    College Station, Texas
+                  </div>
+              </Grid>
+              <Grid item xs={1}></Grid>
 
-        </Grid>
+          </Grid>
+        </Bounce>
       </Grid>
     </Grid>
   );
