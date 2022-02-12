@@ -8,14 +8,15 @@ import Fade from 'react-reveal/Fade';
 
 import happyBasketball from '../__images/happyBasketball.jpg'
 
-import languageSkills from '../__data/Skills.js'
+import {languageSkills} from '../__data/Skills.js'
 
 export default function Home() {
 
     const customStyles = {
         'container' : {
             padding: '10px',
-            paddingTop: '90px'
+            paddingTop: '50px',
+            paddingBottom: '100px'
         },
         'imageStyle' : {
             backgroundImage: `url(${happyBasketball})`,
@@ -47,6 +48,23 @@ export default function Home() {
             height: '4px',
             borderLeft: '1px solid black',
             borderRight: '1px solid black'
+        },
+        'languageHeaderStyle' : {
+            fontSize: '48px',
+            fontWeight: '600',
+            letterSpacing: '2px',
+            borderLeft: '4px solid rgba(255,255,255,.7)',
+            borderRight: '4px solid rgba(255,255,255,.7)'
+        },
+        'skillHeaderStyle' : {
+            // textDecoration: 'overline rgba(255,255,255,.8)',
+            fontSize: '34px'
+        },
+        'aboutMeStyle' : {
+            fontSize: '30px',
+            fontFamily: "'Aclonica', sans-serif",
+            color: 'white',
+            textShadow: '1px 0px 14px white',
         }
     }
 
@@ -54,19 +72,24 @@ export default function Home() {
 
     return (
         <Grid container sx={customStyles.container}>
+            <Fade left duration={4000}>
+                <div style={customStyles.aboutMeStyle}>
+                    ABOUT ME
+                </div>
+            </Fade>
             <Grid item xs={12} sx={{ padding: '20px', alignContent: 'center'}}>
                 <LightSpeed right duration={3000}>
                     <div style={customStyles.spacerStyle}/>
                 </LightSpeed>
             </Grid>
 
-            <Grid item xs={1}></Grid>
-            <Grid item xs={5}>
+            <Grid item sm={1} xs={0}></Grid>
+            <Grid item sm={5} xs={12}>
                 <Zoom left duration={1600}>
                     <img src={happyBasketball} style={customStyles.imageStyle} />
                 </Zoom>
             </Grid>
-            <Grid item xs={6} sx={{ padding: '20px', textAlign: 'left' }}>
+            <Grid item sm={6} xs={12} sx={{ padding: '20px', textAlign: 'left' }}>
                 <Grid container>
                     <Rotate top right duration={1000} delay={500}>
                         <Grid item xs={12} sx={customStyles.headerStyle}>Dillon Michael Lee, thats me! </Grid>
@@ -81,13 +104,43 @@ export default function Home() {
                     </Fade>
                 </Grid>
             </Grid>
-            <Grid item xs={12} sx={{ padding: '20px', alignContent: 'center'}}>
+            <Grid item xs={12} sx={{ paddingTop: '10px', alignContent: 'center'}}>
                 <LightSpeed left duration={3000}>
                     <div style={customStyles.spacerStyle}/>
                 </LightSpeed>
             </Grid>
-            <Grid item xs={12}>
-                <img src={'/images/javascriptlogo.png'} height={50} width={50} />
+            <Grid item xs={12} sx={{alignContent: 'center'}}>
+                <LightSpeed right duration={3000}>
+                    <h1 style={customStyles.languageHeaderStyle}>
+                        SKILLS & LANGUAGES   
+                    </h1>
+                </LightSpeed>
+            </Grid>
+            <Grid item xs={12} sx={{ paddingBottom: '10px', alignContent: 'center'}}>
+                <LightSpeed left duration={3000}>
+                    <div style={customStyles.spacerStyle}/>
+                </LightSpeed>
+            </Grid>
+            <Grid item xs={12} sx={{ paddingTop: '5px' }}>
+                <Grid container>
+                    {languageSkills.map((each, index)=>{
+                        return (
+                            <Grid item xs={12} sm={3} sx={{ paddingTop: '10px' }}>
+                                <LightSpeed left duration={3000} delay={(index*200)}>
+                                    <h2 style={customStyles.skillHeaderStyle}>
+                                        {each.name}
+                                    </h2>
+                                    <img src={each.imagePath} width={200} height={100} style={{ borderRadius: '20px', border: '1px solid rgba(255,255,255,.8)' }} />
+                                </LightSpeed>
+                            </Grid>
+                        )
+                    })}
+                </Grid>
+            </Grid>
+            <Grid item xs={12} sx={{ paddingTop: '50px', alignContent: 'center'}}>
+                <LightSpeed right duration={4000}>
+                    <div style={customStyles.spacerStyle}/>
+                </LightSpeed>
             </Grid>
         </Grid>
     )
