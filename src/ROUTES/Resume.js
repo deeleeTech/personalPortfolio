@@ -6,7 +6,7 @@ import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import LightSpeed from 'react-reveal/LightSpeed';
 import resumePDF from '../__images/resumeDillon.pdf';
-import {AiFillGithub} from 'react-icons/ai'
+import {AiFillGithub, AiOutlineMail} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {GrLocation} from 'react-icons/gr'
 import {AiFillPhone} from 'react-icons/ai'
@@ -91,6 +91,16 @@ export default function Resume() {
               <Grid item xs={9} sx={{ paddingTop: '40px' }}>
                   <div style={customStyles.socialText}>
                     www.github.com/deeleeTech
+                  </div>
+              </Grid>
+              <Grid item xs={1}></Grid>
+
+              <Grid item xs={2} sx={customStyles.socialStyle}>
+                  <AiOutlineMail style={{ border: '1px solid grey', borderRadius: '25px', backgroundColor: 'rgba(0,0,0,.7)' }}/>
+              </Grid>
+              <Grid item xs={9} sx={{ paddingTop: '40px' }}>
+                  <div style={customStyles.socialText}>
+                    deeleeTech@outlook.com
                   </div>
               </Grid>
               <Grid item xs={1}></Grid>

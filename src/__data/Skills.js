@@ -1,50 +1,50 @@
 export const languageSkills = [
     {
         'name' : 'Javascript',
-        'imagePath' : '/images/javascriptlogo.png'
+        'imagePath' : '/images/skillLogos/javascriptlogo.png'
     },
     {
         'name' : 'CSS',
-        'imagePath' : '/images/cssLogo.png'
+        'imagePath' : '/images/skillLogos/cssLogo.png'
     },
     {
         'name' : 'HTML',
-        'imagePath' : '/images/htmlLogo.png'
+        'imagePath' : '/images/skillLogos/htmlLogo.png'
     },
     {
         'name' : 'Material UI',
-        'imagePath' : '/images/materialUIlogo.png'
+        'imagePath' : '/images/skillLogos/materialUIlogo.png'
     },
     {
         'name' : 'Mongo DB',
-        'imagePath' : '/images/mongoLogo.png'
+        'imagePath' : '/images/skillLogos/mongoLogo.png'
     },
     {
         'name' : 'Node JS',
-        'imagePath' : '/images/nodeLogo.jpeg'
+        'imagePath' : '/images/skillLogos/nodeLogo.jpeg'
     },
     {
         'name' : 'React JS',
-        'imagePath' : '/images/reactLogo.png'
+        'imagePath' : '/images/skillLogos/reactLogo.png'
     },
     {
         'name' : 'Redux',
-        'imagePath' : '/images/reduxLogo.png'
+        'imagePath' : '/images/skillLogos/reduxLogo.png'
     },
     {
         'name' : 'React Router',
-        'imagePath' : '/images/reactRouterLogo.png'
+        'imagePath' : '/images/skillLogos/reactRouterLogo.png'
     },
     {
         'name' : 'React Native',
-        'imagePath' : '/images/reactNativeLogo.png'
+        'imagePath' : '/images/skillLogos/reactNativeLogo.png'
     },
     {
         'name' : 'SQL',
-        'imagePath' : '/images/sqlLogo.png'
+        'imagePath' : '/images/skillLogos/sqlLogo.png'
     },
     {
         'name' : 'Python',
-        'imagePath' : '/images/pythonskill.png'
+        'imagePath' : '/images/skillLogos/pythonskill.png'
     }
 ]

@@ -5,12 +5,16 @@ import Slide from 'react-reveal/Slide'
 import Bounce from 'react-reveal/Bounce'
 import Fade from 'react-reveal/Fade'
 
+import { projectList } from '../__data/ProjectsInfo';
+import ProjectCard from '../components/ProjectCard';
+
 export default function Projects() {
 
     const customStyles = {
         'container' : {
             padding: '10px',
-            paddingTop: '70px'
+            paddingTop: '70px',
+            paddingBottom: '40px'
         },
         'mainSection' : {
             height: '400px',
@@ -55,17 +59,37 @@ export default function Projects() {
     const mainAnimation = new Animation
 
     return (
-      <Grid container sx={customStyles.container}>
-          <Fade left duration={4000}>
-              <div style={customStyles.projectsStyle}>
-                  PROJECTS
-              </div>
-          </Fade>
-          <Grid item xs={12} sx={{ padding: '20px', alignContent: 'center'}}>
-              <LightSpeed right duration={3000}>
-                  <div style={customStyles.spacerStyle}/>
-              </LightSpeed>
-          </Grid>
-      </Grid>
-  )
+        <Grid container sx={customStyles.container}>
+            <Fade left duration={4000}>
+                <div style={customStyles.projectsStyle}>
+                    PROJECTS
+                </div>
+            </Fade>
+            <Grid item xs={12} sx={{ paddingTop: '20px', alignContent: 'center'}}>
+                <LightSpeed right duration={3000}>
+                    <div style={customStyles.spacerStyle}/>
+                </LightSpeed>
+            </Grid>
+            <Grid item xs={12}>
+                <Grid container>
+                    {projectList.map((each, index)=>{
+                        return(
+                            <Grid item xs={12} sx={{ padding: '20px' }}>
+                                <Slide left duration={2000}>
+                                    <ProjectCard cardData={each} />
+                                </Slide>
+                            </Grid>
+                        )
+                    })}
+                </Grid>
+            </Grid>
+            <Grid item xs={12} sx={{ paddingTop: '40px', alignContent: 'center'}}>
+                <LightSpeed right duration={3000}>
+                    <div style={customStyles.spacerStyle}/>
+                </LightSpeed>
+            </Grid>
+        </Grid>
+    )
 }
+
+
