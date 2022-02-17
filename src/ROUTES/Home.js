@@ -21,7 +21,7 @@ export default function Home() {
             fontSize: '20px',
             color: 'white',
             textShadow: '1px 1px 15px black',
-            paddingTop: '75px',
+            paddingTop: '60px',
             textAlign: 'left',
             fontFamily: "'Aclonica', sans-serif",
             paddingLeft: '20px'
@@ -43,14 +43,14 @@ export default function Home() {
 
     return (
         <Grid container sx={customStyles.container}>
-            <Grid item xs={9} sx={customStyles.mainSection}>
+            <Grid item sm={9} xs={12} sx={customStyles.mainSection}>
                 <Bounce left duration={2600}>
                     <h1 style={customStyles.header}>
                         Dillon Lee
                     </h1>
                 </Bounce>
             </Grid>
-            <Grid item xs={3} sx={customStyles.sideSection}>
+            <Grid item sm={3} xs={12} sx={customStyles.sideSection}>
                 <Slide right cascade delay={1600} duration={3000}>
                     <div>
                         <h2>Developer</h2>
