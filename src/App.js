@@ -23,33 +23,30 @@ import About from './ROUTES/About';
 import Resume from './ROUTES/Resume';
 
 import testPDF from './__images/sample.pdf'
+import MobileNavBar from './components/MobileNavBar';
 
 
 
 
 
 export default function App() {
-  const propsFade = useSpring({ to: { opacity: 1 }, from: { opacity: 0 } }); //SPRING ANIMATION
+
+  const screenWidth = window.screen.width;
 
   return (
     <div className='App'>
-      <animated.div style={propsFade}>
-        <div style={{ width: '100%', position: 'fixed', top: '0px', left: '0px', zIndex: 1 }}><NavBar /></div>
+        <div style={{ width: '100%', position: 'fixed', top: '0px', left: '0px', zIndex: 1 }}>{ screenWidth > 400 ? <NavBar /> : <MobileNavBar /> }</div>
         <Routes>
           <Route
             path="/"
             element={
-              <animated.div style={propsFade}>
                 <Home />
-              </animated.div>
             } 
           />
           <Route
             path="/Home"
             element={
-              <animated.div style={propsFade}>
                 <Home />
-              </animated.div>
             } 
           />
           {/* <Route
@@ -64,7 +61,6 @@ export default function App() {
           <Route path="/About" element={<About />} />
           <Route path="/Resume" element={<Resume pdfDoc={testPDF} />} />
         </Routes>
-      </animated.div>
     </div>
   );
 }

@@ -88,16 +88,16 @@ export default function ProjectCard(props) {
 
     return (
       <Grid container sx={customStyles.container}>
-          <Grid item xs={6} sx={{ paddingRight: '15px' }}>
+          <Grid item sm={6} xs={12} sx={{ paddingRight: '15px' }}>
               <img src={projectData.imagePath} style={customStyles.projectImage} />
           </Grid>
-          <Grid item xs={6}>
+          <Grid item sm={6} xs={12}>
               <Grid container>
                   <Grid item xs={12} sx={customStyles.nameStyle}>
                       {projectData.name}
                   </Grid>
                   <Grid item xs={12} sx={{ height: '10px' }}></Grid>
-                  <Grid item xs={8}>
+                  <Grid item xs={7}>
                       <Grid container sx={{ textAlign: 'left', fontSize: '18px' }}>
                           <Grid item xs={12}>
                               Title : {projectData.name} {projectData.demoAccess ? <Button sx={customStyles.demoButtonStyle}> Demo </Button> : null}
@@ -107,7 +107,7 @@ export default function ProjectCard(props) {
                           </Grid>
                       </Grid>
                   </Grid>
-                  <Grid item xs={4}>
+                  <Grid item xs={5}>
                       <Grid container>
                           <Grid item xs={12}>
                             <Button disabled={!projectData.clientAccess} onClick={()=>handleExternalClick(projectData.githubLinkClient)} sx={customStyles.clientStyle}>

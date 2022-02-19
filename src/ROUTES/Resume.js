@@ -75,14 +75,14 @@ export default function Resume() {
                 </LightSpeed>
       </Grid>
       <Grid item xs={1}></Grid>
-      <Grid item xs={6}>
+      <Grid item sm={6} xs={12}>
         <Bounce bottom duration={2000}>
            <Document file={resumePDF} onLoadSuccess={onDocumentLoadSuccess}>
               <Page pageNumber={pageNumber} />
           </Document>
         </Bounce>
       </Grid>
-      <Grid item xs={5}>
+      <Grid item sm={5} xs={12}>
         <Bounce right duration={2000}>
           <Grid container>
               <Grid item xs={2} sx={customStyles.socialStyle}>
