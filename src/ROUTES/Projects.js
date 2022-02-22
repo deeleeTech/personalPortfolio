@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { Grid } from '@mui/material';
+import { Grid, Drawer } from '@mui/material';
 import LightSpeed from 'react-reveal/LightSpeed';
 import Slide from 'react-reveal/Slide'
 import Bounce from 'react-reveal/Bounce'
 import Fade from 'react-reveal/Fade'
+import { MdOutlineKeyboardBackspace } from "react-icons/md";
+
 
 import { projectList } from '../__data/ProjectsInfo';
 import ProjectCard from '../components/ProjectCard';
@@ -56,7 +58,18 @@ export default function Projects() {
     },
     }
 
-    const mainAnimation = new Animation
+    const mainAnimation = new Animation;
+    const [ drawerOpen, setDrawerOpen ] = useState(false);
+    const [ toggledDetails, setToggledDetails ] = useState(null);
+
+    const handleDrawerOpen = (drawerDetails) => {
+        setDrawerOpen(true);
+        setToggledDetails(drawerDetails)
+    }
+    const handleDrawerClose = () => {
+        setDrawerOpen(false);
+        setToggledDetails(null)
+    }
 
     return (
         <Grid container sx={customStyles.container}>
@@ -76,7 +89,7 @@ export default function Projects() {
                         return(
                             <Grid item xs={12} sx={{ padding: '20px' }}>
                                 <Slide left duration={2000}>
-                                    <ProjectCard cardData={each} />
+                                    <ProjectCard cardData={each} handleDetails={handleDrawerOpen} />
                                 </Slide>
                             </Grid>
                         )
@@ -88,8 +101,35 @@ export default function Projects() {
                     <div style={customStyles.spacerStyle}/>
                 </LightSpeed>
             </Grid>
+            <Drawer
+             anchor={'right'}
+             open={drawerOpen}
+             onClose={()=>handleDrawerClose()}
+            >
+                {toggledDetails ? <DrawerContents details={toggledDetails} goBack={handleDrawerClose} /> : null}
+          </Drawer>
         </Grid>
     )
 }
 
 
+function DrawerContents(props){
+    const drawerDetails = props.details;
+    const closeDrawer = props.goBack;
+    return(
+        <Grid container sx={{ width: '330px', padding: '4px' }}>
+            <Grid item xs={12} onClick={()=>closeDrawer()} sx={{ fontSize: '30px' }}>
+                <MdOutlineKeyboardBackspace />
+            </Grid>
+            <Grid item xs={12} sx={{ fontSize: '24px', padding: '10px' }}>
+                <b>Project</b> : {drawerDetails.name}
+            </Grid>
+            <Grid item xs={12} sx={{ fontSize: '24px', padding: '10px' }}>
+                <b>Origin</b> : {drawerDetails.details.origin}
+            </Grid>
+            <Grid item xs={12} sx={{ fontSize: '24px', padding: '10px' }}>
+                <b>Overview</b> : {drawerDetails.details.stackSummary}
+            </Grid>
+        </Grid>
+    )
+}

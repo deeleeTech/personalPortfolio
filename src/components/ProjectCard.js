@@ -72,7 +72,7 @@ export default function ProjectCard(props) {
             padding: '1px'
         },
         'demoButtonStyle' : {
-            padding: '1px',
+            padding: '3px',
             color: 'green',
             backgroundColor: 'rgba(255,255,255,.4)',
             border: '1px solid black'
@@ -84,7 +84,8 @@ export default function ProjectCard(props) {
     }
 
     const mainAnimation = new Animation;
-    const projectData = props.cardData
+    const projectData = props.cardData;
+    const toggleDetails = props.handleDetails;
 
     return (
       <Grid container sx={customStyles.container}>
@@ -100,10 +101,13 @@ export default function ProjectCard(props) {
                   <Grid item xs={7}>
                       <Grid container sx={{ textAlign: 'left', fontSize: '18px' }}>
                           <Grid item xs={12}>
-                              Title : {projectData.name} {projectData.demoAccess ? <Button sx={customStyles.demoButtonStyle}> Demo </Button> : null}
+                              Title : {projectData.name}
                           </Grid>
                           <Grid item xs={12}>
-                              Started : {projectData.startDate}
+                              Started : {projectData.startDate} {projectData.demoAccess ? <Button onClick={()=>handleExternalClick(projectData.liveLink)} sx={customStyles.demoButtonStyle}> Live Demo </Button> : null}
+                          </Grid>
+                          <Grid item xs={12} sx={{ padding: '10px' }}>
+                              {projectData.description}
                           </Grid>
                       </Grid>
                   </Grid>
@@ -120,7 +124,7 @@ export default function ProjectCard(props) {
                             </Button>
                           </Grid>
                           <Grid item xs={12}>
-                            <Button sx={customStyles.detailsStyle}>
+                            <Button onClick={()=>toggleDetails(projectData)} sx={customStyles.detailsStyle}>
                                 <BiDetail sx={{ fontSize: '40px' }} />DETAILS
                             </Button>
                           </Grid>
@@ -135,7 +139,7 @@ export default function ProjectCard(props) {
                           </Grid>
                           {projectData.technologies.map((each)=>{
                               return(
-                                  <Grid item xs={3} sx={customStyles.techStyle}>
+                                  <Grid item sm={3} xs={4} sx={customStyles.techStyle}>
                                       {each}
                                     </Grid>
                               )

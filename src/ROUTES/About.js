@@ -6,7 +6,7 @@ import Rotate from 'react-reveal/Rotate';
 import Flip from 'react-reveal/Flip';
 import Fade from 'react-reveal/Fade';
 
-import happyBasketball from '../__images/happyBasketball.jpg'
+import aboutmePic from '../__images/aboutmePic.jpg'
 
 import {languageSkills} from '../__data/Skills.js'
 
@@ -19,12 +19,12 @@ export default function Home() {
             paddingBottom: '100px'
         },
         'imageStyle' : {
-            backgroundImage: `url(${happyBasketball})`,
+            backgroundImage: `url(${aboutmePic})`,
             backgroundPosition: 'center',
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
-            minHeight: '400px',
-            width: '100%',
+            height: '450px',
+            width: '70%',
             border: '2px solid black'
         },
         'headerStyle' : {
@@ -54,11 +54,14 @@ export default function Home() {
             fontWeight: '600',
             letterSpacing: '2px',
             borderLeft: '4px solid rgba(255,255,255,.7)',
-            borderRight: '4px solid rgba(255,255,255,.7)'
+            borderRight: '4px solid rgba(255,255,255,.7)',
+            textShadow: '1px 0px 20px white'
         },
         'skillHeaderStyle' : {
             // textDecoration: 'overline rgba(255,255,255,.8)',
-            fontSize: '34px'
+            fontSize: '34px',
+            textShadow: '1px 1px black',
+            color: 'white'
         },
         'aboutMeStyle' : {
             fontSize: '30px',
@@ -84,9 +87,9 @@ export default function Home() {
             </Grid>
 
             <Grid item sm={1} xs={0}></Grid>
-            <Grid item sm={5} xs={12}>
+            <Grid item sm={4} xs={12}>
                 <Zoom left duration={1600}>
-                    <img src={happyBasketball} style={customStyles.imageStyle} />
+                    <img src={aboutmePic} style={customStyles.imageStyle} />
                 </Zoom>
             </Grid>
             <Grid item sm={6} xs={12} sx={{ padding: '20px', textAlign: 'left' }}>
@@ -96,14 +99,16 @@ export default function Home() {
                     </Rotate>
                     <Fade delay={3000}>
                         <Grid item xs={12} sx={customStyles.bodyStyle}>
-                        &nbsp;&nbsp;&nbsp;I am a 25 year old full stack developer living in College Station, Texas. My main life goals are to make my mom proud and to ignite generational financial security for my sisters and their kids... if I never have any of my own :)<br />
+                        &nbsp;&nbsp;&nbsp;I am a 25 year old full stack developer living in College Station, Texas. My main ambition is to live a long life of continuous learning and improvement. I love problem solving and taking on new challenges.<br />
                         &nbsp;&nbsp;&nbsp; Coding has been an 8 year hobby and a 2 year career... At the start of 2020, covid, finances, and the untimely death of my role model, Kobe Bryant, combined to create an urgency in myself to start my career with the skills I had. Renting my friends old dusty ASUS laptop, I decided to forgo the rest of that junior year of college and began preparing for a entry level software posistions.
-                        Soon after, I began contract work as the onsite IT department, and after refactoring the code of some existing software projects, I landed a salary with an International Oil Company with no IT team. It was an amazing and challenging experience with a rapid learning enviorment, but I now find myself looking for a team of coders to form 
-                        friends and coworkers doing the same and similar tasks as me.
+                        Soon after, I began contract work as the onsite IT department, and after refactoring the code of existing software projects, I landed a full-time salary with an International Oil Company with no IT team. It was an amazing and challenging experience with a rapid learning enviorment, but I now find myself searching for a team of coders to form 
+                        friends and coworkers doing the same and similar projects as me.
                         </Grid>
                     </Fade>
                 </Grid>
             </Grid>
+            <Grid item sm={1} xs={0}></Grid>
+            
             <Grid item xs={12} sx={{ paddingTop: '10px', alignContent: 'center'}}>
                 <LightSpeed left duration={3000}>
                     <div style={customStyles.spacerStyle}/>
