@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Bounce from 'react-reveal/Bounce';
 import Fade from 'react-reveal/Fade';
 import LightSpeed from 'react-reveal/LightSpeed';
-import resumePDF from '../__images/resumeDillon.pdf';
+import resumePDF from '../__images/resumeDillonLee.pdf';
 import {AiFillGithub, AiOutlineMail} from 'react-icons/ai'
 import {AiFillLinkedin} from 'react-icons/ai'
 import {GrLocation} from 'react-icons/gr'

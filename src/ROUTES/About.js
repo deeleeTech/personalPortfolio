@@ -100,8 +100,8 @@ export default function Home() {
                     <Fade delay={3000}>
                         <Grid item xs={12} sx={customStyles.bodyStyle}>
                         &nbsp;&nbsp;&nbsp;I am a 25 year old full stack developer living in College Station, Texas. My main ambition is to live a long life of continuous learning and improvement. I love problem solving and taking on new challenges.<br />
-                        &nbsp;&nbsp;&nbsp; Coding has been an 8 year hobby and a 2 year career... At the start of 2020, covid, finances, and the untimely death of my role model, Kobe Bryant, combined to create an urgency in myself to start my career with the skills I had. Renting my friends old dusty ASUS laptop, I decided to forgo the rest of that junior year of college and began preparing for a entry level software posistions.
-                        Soon after, I began contract work as the onsite IT department, and after refactoring the code of existing software projects, I landed a full-time salary with an International Oil Company with no IT team. It was an amazing and challenging experience with a rapid learning enviorment, but I now find myself searching for a team of coders to form 
+                        &nbsp;&nbsp;&nbsp; Coding has been an 8 year hobby and a 2 year career... At the start of 2020, covid, finances, and the untimely death of my role model, Kobe Bryant, combined to create an urgency in myself to start my career with the skills I had. Renting my friends old dusty ASUS laptop, I decided to forgo the rest of that junior year of college and began preparing for entry level software positions.
+                        Soon after, I began contract work as the onsite IT department, and after refactoring the code of existing software projects, I landed a full-time salary with an International Oil Company with no IT team. It was an amazing and challenging experience with a rapid learning enviornment, but I now find myself searching for a team of coders to form 
                         friends and coworkers doing the same and similar projects as me.
                         </Grid>
                     </Fade>

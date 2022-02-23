@@ -13,7 +13,7 @@ export default function Home() {
         },
         'mainSection' : {
             height: '400px',
-            paddingLeft: '30px',
+            paddingLeft: '10px',
             height: '100%'
 
         },
@@ -21,17 +21,17 @@ export default function Home() {
             fontSize: '20px',
             color: 'white',
             textShadow: '1px 1px 15px black',
-            paddingTop: '60px',
+            paddingTop: '50px',
             textAlign: 'left',
             fontFamily: "'Aclonica', sans-serif",
             paddingLeft: '20px'
         },
         'header' : {
-            fontSize: window.screen.width > 400 ? '144px' : '72px',
+            fontSize: window.screen.width > 450 ? '124px' : '72px',
             fontWeight: '700',
             letterSpacing: '10px',
             fontFamily: "'Aclonica', sans-serif",
-            textAlign: 'left',
+            textAlign: 'center',
             color: 'rgba(255,255,255,.8)',
             textShadow: '1px 0px 14px white',
             // textDecoration: 'underline black',
@@ -54,8 +54,8 @@ export default function Home() {
                 <Slide right cascade delay={1600} duration={3000}>
                     <div>
                         <h2>Developer</h2>
+                        <h2>Creator</h2>
                         <h2>Entrepreneur</h2>
-                        <h2>Adventurer</h2>
                     </div>
                 </Slide>
             </Grid>

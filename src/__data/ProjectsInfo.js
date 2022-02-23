@@ -42,7 +42,7 @@ export const projectList = [
         'startDate' : "02-10-2022",
         'details' : {
             'origin' : "Runescape is a slow pace game based completely off numbers, stats, and fantasy. The number and stats have always kept me most curious, so this project was made to read and store different data within the game.",
-            'stackSummary' : "Using a react front end form entries interact with node server functions hosted via firebase. The node server interacts with a third party api to gain player data from all of Jagex's servers."
+            'stackSummary' : "Using a react front end form, queryies interact with node server functions hosted via firebase. The node server interacts with a third party api to gain player data from all of Jagex's servers."
         }
     },
     {
