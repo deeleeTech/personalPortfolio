@@ -99,10 +99,9 @@ export default function Home() {
                     </Rotate>
                     <Fade delay={3000}>
                         <Grid item xs={12} sx={customStyles.bodyStyle}>
-                        &nbsp;&nbsp;&nbsp;I am a 25 year old full stack developer living in College Station, Texas. My main ambition is to live a long life of continuous learning and improvement. I love problem solving and taking on new challenges.<br />
-                        &nbsp;&nbsp;&nbsp; Coding has been an 8 year hobby and a 2 year career... At the start of 2020, covid, finances, and the untimely death of my role model, Kobe Bryant, combined to create an urgency in myself to start my career with the skills I had. Renting my friends old dusty ASUS laptop, I decided to forgo the rest of that junior year of college and began preparing for entry level software positions.
-                        Soon after, I began contract work as the onsite IT department, and after refactoring the code of existing software projects, I landed a full-time salary with an International Oil Company with no IT team. It was an amazing and challenging experience with a rapid learning enviornment, but I now find myself searching for a team of coders to form 
-                        friends and coworkers doing the same and similar projects as me.
+                        &nbsp;&nbsp;&nbsp;I am a 25 year old full stack developer living in College Station, Texas. It is my hope to secure a position with a well-established corporation or start up where I can further build my career and become a valuable member of a development team. I have spent the last two years as the entire tech department for an international oil distribution company, where I wore many hats that have helped me gain the skills for this position. 
+                        I understand code on a high enough level to pick up new languages and SDKs quickly. . I have extensive understanding important modern tools and practices such as: React, Node, Express, Object-Oriented-Programing, Redux, Mongo DB, and exposure to many more. I am a great problem solver, team player, and will be happy to self teach any new technologies required for the job. 
+                        Another reason I feel I would make a good fit for a development team is because I also have managerial experience with a company that is well known for customer service and a friendly face, H-E-B. This role established great professional and friendly habits like being coachable, communicative, and friendly at all times. I am looking to add communication and technical support to any development team. 
                         </Grid>
                     </Fade>
                 </Grid>

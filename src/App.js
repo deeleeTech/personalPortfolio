@@ -8,21 +8,12 @@ import Resume from './ROUTES/Resume';
 import {
   Routes,
   Route,
-  Link,
-  useNavigate,
-  useLocation,
-  Navigate,
-  Outlet
+  HashRouter
 } from "react-router-dom";
 import useAuth from './useAuth';
 import './App.css';
 import NavBar from './components/NavBar';
-
-
 import MobileNavBar from './components/MobileNavBar';
-
-
-
 
 
 export default function App() {
