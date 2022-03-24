@@ -1,29 +1,34 @@
-import React from 'react';
-import { render } from "react-dom";
-import {
-   BrowserRouter,
-   Routes,
-   Route,
-   Navigate
- } from "react-router-dom";
-import App from "./App";
-import {createStore} from 'redux';
-import {Provider} from 'react-redux';
-import allReducers from './__reducers';
-import { AuthProvider } from './useAuth';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
 
+import "./assets/css/nucleo-icons.css";
+import "./assets/scss/blk-design-system-react.scss?v=1.2.0";
+import "./assets/demo/demo.css";
 
-const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+import Index from "./views/Index.js";
+import ContactPage from "./views/pages/ContactPage.js";
+import CareerPage from "./views/pages/CareerPage";
+import PartnerPage from "./views/pages/PartnerPage";
 
-
-const rootElement = document.getElementById("root");
-render(
-  <Provider store={store}>
-     <BrowserRouter>
-      <AuthProvider>
-          <App />
-      </AuthProvider>
-     </BrowserRouter>
-  </Provider>,
-  rootElement
+ReactDOM.render(
+  <BrowserRouter>
+    <Switch>
+      <Route path="/home" render={(props) => <Index {...props} />} />
+      <Route
+        path="/partnership"
+        render={(props) => <PartnerPage {...props} />}
+      />
+      <Route
+        path="/career"
+        render={(props) => <CareerPage {...props} />}
+      />
+      <Route
+        path="/contact"
+        render={(props) => <ContactPage {...props} />}
+      />
+      <Redirect from="/" to="/home" />
+    </Switch>
+  </BrowserRouter>,
+  document.getElementById("root")
 );
