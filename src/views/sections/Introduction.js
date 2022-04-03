@@ -2,6 +2,14 @@ import React from "react";
 // reactstrap components
 import { Button, Container, Row, Col } from "reactstrap";
 
+const blogPosts = [
+  {
+    src: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:6915061537866981376',
+    title: 'WebDev',
+    color: 'blue'
+  },
+];
+
 export default function Introduction() {
   return (
     <div className="section section-nucleo-icons">
@@ -18,34 +26,14 @@ export default function Introduction() {
             •DeeLeeTech• is first and formost a helping hand for tech. Saving you time and money across an infinite possibity of choices requires upfront time I am willing invest free of any charge &#x263A; My mission is to use my custom code to save people time and money, while offering advice on technology in general.
             </h4>
           </Col>
+          {/* {blogPosts && blogPosts.map((each)=>{
+            return(
+              <Col lg="8" md="12">
+                  <iframe src={each.src} style={{ width: '100%' }} frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+              </Col>
+            )
+          })} */}
         </Row>
-        <div className="blur-hover">
-          {/* <a href="/#"> */}
-            <div className="icons-container blur-item on-screen mt-5">
-              {/* Center */}
-              <i className="icon tim-icons icon-coins" />
-              {/* Right 1 */}
-              <i className="icon icon-sm tim-icons icon-spaceship" />
-              <i className="icon icon-sm tim-icons icon-money-coins" />
-              <i className="icon icon-sm tim-icons icon-link-72" />
-              {/* Right 2 */}
-              <i className="icon tim-icons icon-send" />
-              <i className="icon tim-icons icon-mobile" />
-              <i className="icon tim-icons icon-wifi" />
-              {/* Left 1 */}
-              <i className="icon icon-sm tim-icons icon-key-25" />
-              <i className="icon icon-sm tim-icons icon-atom" />
-              <i className="icon icon-sm tim-icons icon-satisfied" />
-              {/* Left 2 */}
-              <i className="icon tim-icons icon-gift-2" />
-              <i className="icon tim-icons icon-tap-02" />
-              <i className="icon tim-icons icon-wallet-43" />
-            </div>
-            <span className="blur-hidden h5 text-primary">
-              Let's Create Something That Fits You
-            </span>
-          {/* </a> */}
-        </div>
       </Container>
     </div>
   );

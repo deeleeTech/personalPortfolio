@@ -10,6 +10,7 @@ import Index from "./views/Index.js";
 import ContactPage from "./views/pages/ContactPage.js";
 import CareerPage from "./views/pages/CareerPage";
 import PartnerPage from "./views/pages/PartnerPage";
+import BlogPage from "./views/pages/BlogPage";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -26,6 +27,10 @@ ReactDOM.render(
       <Route
         path="/contact"
         render={(props) => <ContactPage {...props} />}
+      />
+      <Route
+        path="/blog"
+        render={(props) => <BlogPage {...props} />}
       />
       <Redirect from="/" to="/home" />
     </Switch>

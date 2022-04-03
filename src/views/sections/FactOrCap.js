@@ -128,7 +128,7 @@ class FactOrCap extends React.Component {
                 <li>Authentication Component Wrapper</li>
                 <li>Account Encrypted Password Storing</li>
                 <li>Automated Live Game Updates</li>
-                <li>Database Architecture</li>
+                <li>Posting Game Bets</li>
               </ul>
             </TabPane>
           </TabContent>

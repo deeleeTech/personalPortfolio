@@ -157,9 +157,13 @@ export default function MainNavbar() {
                   <i className="tim-icons icon-bullet-list-67" />
                   Contact Me
                 </DropdownItem>
+                <DropdownItem tag={Link} to="/blog">
+                  <i className="tim-icons icon-pencil" />
+                  My Blogs
+                </DropdownItem>
                 <DropdownItem tag={Link} to="/partnership">
                   <i className="tim-icons icon-image-02" />
-                  Samll Business / Entrepreneurs
+                  Small Business / Entrepreneurs
                 </DropdownItem>
                 <DropdownItem tag={Link} to="/career">
                   <i className="tim-icons icon-single-02" />

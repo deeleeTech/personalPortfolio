@@ -17,7 +17,7 @@ export default function PageHeader() {
         <div className="content-center brand">
           <h1 className="h1-seo" style={{ fontSize: '60px' }}>•DeeLeeTech•</h1>
           <h3 className="d-none d-sm-block">
-            Dedicated to helping small business and Entrepreneur scale, automate, and streamline processes with custom coding solutions
+            Dedicated to helping small business and Entrepreneurs scale, automate, and streamline processes with custom coding solutions
           </h3>
         </div>
       </Container>
